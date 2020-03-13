@@ -1,0 +1,42 @@
+{% extends 'partial/layout.html' %}
+    {% block header %}
+    {% include "partial/header.html" %}
+    {% endblock header %}
+
+    
+  
+       {% block category %}
+       {% include "partial/category.html" %}
+       {% endblock category %}
+
+       {% block popular_category %}
+       {% include "partial/popular_category.html" %}
+       {% endblock popular_category %}
+
+   
+   
+        {% block job_listing %}
+       
+          <p>Login <p>
+          <form method="post">
+            {% csrf_token %} 
+            {{ form|crispy  }}
+            <button type="submit">Login</button>
+          </form>
+
+
+        {% endblock job_listing %}
+
+    
+     
+
+
+    
+   
+         {% block footer %}
+         {% include "partial/footer.html" %}
+         {% endblock footer %}
+
+    {% block script %}
+    {% include "partial/script.html" %}
+    {% endblock script %}
