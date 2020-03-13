@@ -1,0 +1,35 @@
+{% load static %}
+ <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section_title mb-40">
+                        <h3>Popolar Categories</h3>
+                    </div>
+                </div>
+            </div>
+     
+
+
+            <div class="row">
+            
+            {% for category in categories|slice:":8"  %}
+                <div class="col-lg-4 col-xl-3 col-md-6">
+                    <div class="single_catagory">
+                        <li><a href="{% url 'category_jobs' category_id=category.id %}"><h4>{{category.title}}</h4></a></li>
+                        <p> <span>
+                        {% for jobs in jobs_list %}
+                            {% if forloop.last %}
+                            {{forloop.counter}}
+                        {% endif %}
+                         {% endfor %}
+                        </span> Available position</p>
+                      
+                    </div>
+                </div>
+                
+                {% endfor %}
+                
+               
+            </div>
+            
+        </div>

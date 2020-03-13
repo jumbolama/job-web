@@ -1,0 +1,36 @@
+       
+{% extends 'partial/layout.html' %}
+    {% block header %}
+    {% include "partial/header.html" %}
+    {% endblock header %}
+
+    
+  
+       {% block category %}
+       {% include "partial/category.html" %}
+       {% endblock category %}
+
+       {% block popular_category %}
+       {% include "partial/popular_category.html" %}
+       {% endblock popular_category %}
+
+   
+   
+        {% block job_listing %}
+       <p>You are logged out successfully. <a href="{% url 'login' %}">Login</a> again. <p>
+
+        {% endblock job_listing %}
+
+    
+     
+
+
+    
+   
+         {% block footer %}
+         {% include "partial/footer.html" %}
+         {% endblock footer %}
+
+    {% block script %}
+    {% include "partial/script.html" %}
+    {% endblock script %}
